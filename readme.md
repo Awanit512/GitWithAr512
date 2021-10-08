@@ -81,6 +81,10 @@ git clone https://github.com/remote_repo/remote_repo.git
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 ### Git ignore : Helps to ignore some files or not to track those files
 
 touch .gitignore
@@ -96,6 +100,8 @@ error.log
 /dir/
 dir/    
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Git diff  : Calculates the diff between unmodified files in staging area and modified files in working directory.(ex:: i staged the file say readme.md after that i modified the same file then readme.md will be in both -> Staging area ( Changes to be Committed ) as well as in -> Changes not staged for Commit. 
@@ -116,4 +122,12 @@ git commit -a -m "skiiping satging area and commiting directly"
 PS:: suppose u have created a new file by say touch new_file.txt then as it will be untracked so using above command i.e git commit -a -m "any suitable commit message here"  will not commit the untracked file this command will commit only tracked modiied file. for untracked u have to use command git add new_file.txt in order to make it tracked after that u can use above command to directly commit it skipping the habit of adding files to staging area explicitly. 
 
 
-PS :: :: Note the -a flag helps to add files to staging area implicitly after that it finally commit it. 
+PS :: :: Note the -a flag helps to add files to staging area implicitly after that it finally commit it.  
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+## Moving and Renaming files in git
+
