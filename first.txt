@@ -3,3 +3,4 @@ Hi is my first edits for Git Tutorials
 <h1>Hi First Text</h1>
 error.log is registered
 Other files are also registered too.
+skipping staging area now
