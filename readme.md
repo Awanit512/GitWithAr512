@@ -237,6 +237,15 @@ Changes to be commited:    <--------- (this line because we used git in front of
 ## If want to commit your changes into previous commit 
 
 	git add . 
-	git commit --amend   // amend means minor chanegs in just previous commit.`
+	git commit --amend   // amend means minor chanegs in just previous commit.
+
+
+## To make a staged file to unstaged 
+
+	git restore --staged <filename>
+
+## To Unmodify a File: Suppose you modified a file named first.cc now u want to restore the previous vesrion
+
+	git checkout -- first.cc
 
 
