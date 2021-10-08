@@ -1,2 +1,5 @@
 This is my first edit for Git Tutorials
 Hi is my first edits for Git Tutorials
+<h1>Hi First Text</h1>
+error.log is registered
+Other files are also registered too.
