@@ -244,8 +244,15 @@ Changes to be commited:    <--------- (this line because we used git in front of
 
 	git restore --staged <filename>
 
-## To Unmodify a File: Suppose you modified a file named first.cc now u want to restore the previous vesrion
+## To Unmodify a File: Suppose you modified a file named first.cc now u want to restore the previous vesrion:
+
+	git restore first.cc
+
+### or 
 
 	git checkout -- first.cc
+
+	
+
 
 
