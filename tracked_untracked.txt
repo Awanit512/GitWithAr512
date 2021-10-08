@@ -11,3 +11,4 @@ in order t make it tracked jsut do git add . and not got commit -a -m ' coommit 
 now we have made this file to be tracdked by git by 'git add tracked_untracked.txt' 
 now changed done will b easily tracked by the git
 --------------------
+........ || >>>>. ..........
