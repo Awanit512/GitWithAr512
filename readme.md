@@ -131,3 +131,43 @@ PS :: :: Note the -a flag helps to add files to staging area implicitly after th
 
 ## Moving and Renaming files in git
 
+note :: we can remove the files by simply deleting it or renamed it (f1.txt --> g1.txt ) say  by use of GUI but in this case later the git status shows a new file  (g1.txt ) which is -->untracked  which i use to renamed the older file (f1.txt ) and also show the status of older file (f1.txt) which i renamed  as deleted.
+But yeah once we add it to staging area by git add . then it shows the right message i.e renamed : f1.txt to g1.txt
+
+so instead of deleting in this way bettwe to delete via git as changes such as renaming and deleting are automatically staged so just need to commit.
+
+
+# To delete: 
+	
+	git rm f1.txt
+	where f1.txt is the name of file to be deleted.
+
+
+
+# To Rename: 
+	
+	git mv f1.txt g1.txt
+	where f1.txt is the renamed to g1.txt.
+
+	Now we just need to do git commit -m "" in order to commit the new chaneges.
+
+
+
+
+#####################################3########### IMP #############################################
+
+## Suppose we made any tracked file say first.txt into .gitignore and commit it by git commit -a -m "make firt.txt to ignore by git"
+ then after modiftying first.txt it still get reflected in git status 
+logically :: it should not be there as we already listed it into .gitignore so it shoud stop tracking it but No , it will still track it because since we have keep the name of file in .gitignore which earlier was getting tracked by the git so we have to tell explicitly to git not to track by the command
+
+	git rm --cached first.txt  
+
+	Note this command will not delete the file but rather stop tracking it, so now it can be sucefully ignored by the git .
+	But Note upon typing git status it will list :
+
+	Changes to be commited:    <--------- (this line because we used git in front of git rm --cached first.txt so no need to add changed to staging area already staged and is ready for commit)
+	    deleted : first.txt    <------- IT to be noted here we have just make git not to tracked but it list deleted
+
+	 
+
+
