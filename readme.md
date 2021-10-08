@@ -232,6 +232,7 @@ Changes to be commited:    <--------- (this line because we used git in front of
 		git log --pretty=format:"%h -- %ae" // hash commit -- author email-->  "%h -- %ae"
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## If want to commit your changes into previous commit 
@@ -248,9 +249,23 @@ Changes to be commited:    <--------- (this line because we used git in front of
 
 	git restore first.cc
 
-### or 
+###  or 
 
 	git checkout -- first.cc
+
+
+# Note PS:: the 'git restore' compares working dir changes to its  nearest one i.e staging area or .git repo if ur file is not in staging area as it not yet staged then on restoring it will checkout to previous commit changes else if its staged then only non staged changes of that  file will be removed leaving behind staged chanegea
+ for removing staged changes too two ways:
+
+ 	1> firt make the file unstaged by 'git restore --staged <filename>' after that 'git restore <filename>'
+ 	2> [ NOT RECCOMENDED ]   git checkout -f // straightforward leads to previos commit dangerous if u dont want to reached to preivios commit state for other files . 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## supoose mny changes have been done and now don't want to commit these changes but rather want to go back to previous / or wnat to restore the previosu commit
+
+	git checkout -f
 
 	
 
