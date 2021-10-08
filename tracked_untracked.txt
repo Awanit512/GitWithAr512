@@ -1,0 +1,13 @@
+This file is jus for testing tracked untrakced when kept inside .gitignroe
+This edit is after putting this file name in .gitignore to see git still track it or not note this file is tracked upto noe as we did not explicitly force git to untrack it.
+yes we checked even if it is in gitignore stil git tracked it 
+lets us force git to untrack it by git rm --cached command
+this edit is done when after forcing git to untrack this file by git rm --cached 
+by typing git status we confirmed that git is no more tracking this file 
+Now lets remove this filename from .gitignore 
+we have remove this filename from .gitignore and after doing 'git status' now git list this filename  to be untracked as desired 
+now as this is untrackeed so any changed done to it will not be tracked by the git
+in order t make it tracked jsut do git add . and not got commit -a -m ' coommit mesage' as u guess it write later command only commit files trakced by the git and not untracked file
+now we have made this file to be tracdked by git by 'git add tracked_untracked.txt' 
+now changed done will b easily tracked by the git
+--------------------
