@@ -276,6 +276,36 @@ Changes to be commited:    <--------- (this line because we used git in front of
 	git remote add origin https://github.com/Awanit512/GitWithAr512.git  
 	// meaning this command add remote URL https://github.com/Awanit512/GitWithAr512.git   (this is for github we can siliarily go for gitlab) by name as a origin.  here instad of origin we can keep other name such as git remote add MAINORIGIN https://github.com/Awanit512/GitWithAr512.git  but its feneral parctise to say that as origin
 
+	Note :: It is recommended to use ssh url for pushing as -->Support for password authentication was removed on August 13, 2021 so git will tell you to  use a personal access token instead. For setting this :
+
+
+
+					--------------------------------------------------------------------------------------------------------
+
+	^^^^^
+
+
+	Follows Following steps :
+			>>> ssh-keygen -t ed25519 -C "your_github_email_here.com"  
+			 //This will generate private/public key pair 
+
+			>>> eval "$(ssh-agent -s)"
+			>>> ssh-add ~/.ssh/id_ed25519
+			>>> tail ~/.ssh/id_rsa.pub
+					Now in the output copy the key and Go To github repo in which you want to push 
+					Go to settingd-->
+					 				Deploy Krys-->	
+					 								Add Deploy Key-->	
+					 													Give the Titile and paste the key in Key TextArea which u copied from the terminal.  
+			After thta changes can be easily pushed to yrs repo.
+
+					--------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 	git remote
 		o/p-->origin
@@ -285,19 +315,78 @@ Changes to be commited:    <--------- (this line because we used git in front of
 		      origin	https://github.com/Awanit512/GitWithAr512.git (push)
 
 
-	git branch -M main   // by default its main
+
+
+
+
+	git branch -M main   // by default its main if this step is skipped thne git implicitly do this 
+							--> Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+
+
 
 	git push -u origin main
 
-		Enter urs username and Password : to push yr changes to github repo.
+		Enter urs username and Password if promplted  : to push yr changes to github repo. ( remember the password is that ssh deploy key. if forgot then set up the new one by following same step as detailed above in ^^^^^)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ Suppoose u want to remove the exsting origin URL then
+
+	git remote remove origin
+
+Now u can add any other origin URL by 'git remote add origin <url>'
+
+	                 OR
+
+Above both steps for acheving goal( i.e changing origin url to something else )can be done by following command:
+
+	git remote set-url origin <required_new_url>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
 
+## Git ALiases it helps to write just a short command for the long commands by aliasing those commnads.
+	
+examples we suppose want git st t perform same as git status we can do this by :
+
+	git config --global alias.st status
+
+	Now 'git st' is same as 'git status'
 
 
+now lets commit by git cmit by 
 
+
+	git config --global alias.cmit commit
+
+	Now both git commit -m " " is same as git cmit -m " "
+
+
+Now lets make a alias for unstaging the file say f1.txt
+
+	git config --global alias.unstaged 'restore --staged --'
+
+	Now git restore --staged f1.txt is same as git unstaged f1.txt
+
+
+Now lets make another alias for checking last commit and last two commits :
+
+	git config --global alias.last 'log -p -1'
+
+NOW, git log -p -1 is same as git last 
+
+and 
+
+	git config --global alias.last_two 'log -p -1'
+
+NOW, git log -p -1 is same as git last_two
 
 
 
