@@ -397,6 +397,54 @@ Lasly To remove the aliases : (suppose we wan't to remove alias.last-two then do
 
 	This way doing seems safer than ediiting config file by : --> 'git config --global --edit'
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### ------------------------------------------------------------------------IMPORTANT-------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+## Git Branching and Switching  
+
+
+in order to make a branch type following : 	
+
+	git checkout -b develop   // where develop is the branch name   here this command create a new branch by -b flag and chekcout to new branch.
+
+
+	Difference between git checkout and git branch 
+
+
+	git  branch <new-brach-name> :-  creates a new branch but stays at existing branch.
+	git checkout -b <new-branch-name> :- creates a new brahc and check in to new barnch. 
+
+
+	git chckout -b <branch-name> == git branch <new-branch>
+									git switch <new-branch>
+
+									or
+
+									git branch <new-branch>
+									git checkout <new-branch>
+
+
+	# To list all the BRANCHES:
+
+		git branch 
+
+
+
+	# To move to some branch say dev
+
+		git checkout dev
+
+		or
+
+		git switch dev
+
+
 
 
 
