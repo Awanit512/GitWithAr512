@@ -268,6 +268,39 @@ Changes to be commited:    <--------- (this line because we used git in front of
 	git checkout -f
 
 	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Git :: Working with remote repositories. 
+
+	git remote add origin https://github.com/Awanit512/GitWithAr512.git  
+	// meaning this command add remote URL https://github.com/Awanit512/GitWithAr512.git   (this is for github we can siliarily go for gitlab) by name as a origin.  here instad of origin we can keep other name such as git remote add MAINORIGIN https://github.com/Awanit512/GitWithAr512.git  but its feneral parctise to say that as origin
+
+
+	git remote
+		o/p-->origin
+
+	git remote -v
+		o/p-> origin	https://github.com/Awanit512/GitWithAr512.git (fetch)
+		      origin	https://github.com/Awanit512/GitWithAr512.git (push)
+
+
+	git branch -M main   // by default its main
+
+	git push -u origin main
+
+		Enter urs username and Password : to push yr changes to github repo.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
