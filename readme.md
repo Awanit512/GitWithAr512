@@ -446,7 +446,82 @@ in order to make a branch type following :
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+## Merge Conflict/ Merging 
+
+assume we are in main branch
+
+	git merge tryFeature
+
+
+## Merge Conflict 
+whenever mege conflict arises it starts with a 'conflict resolutio marker' 
+
+	<<<<<<< HEAD   and end with >>>>>>> tryFeature   assuming conflict is between brancehs HEAD (main) & tryFeature
+	and code part which creates conflict between both branches is seperated by =======  .
+ 
+	example:
+			<<<<<<< HEAD
+			    <h1>Hi THis is Awanit512 </h1>
+			=======
+			    <h1>hello WORLD!!!!!!!!!!!!!!!</h1>
+			>>>>>>> tryFeature 
+
+For resolving it either kep both or Imcoming Changes( changes of tryFeature branch) or keep changes Current branch (i.e of main branch) 
+
+
+
+--------------------------------- Branch Management ---------------------------------------------------------
+
+
+To list all branches(* shows currently we are in which branch )
+
+	git branch
+
+To show all branches with last commit's commit hash id and commit message 
+
+	git branch -v
+
+	o/p:	  develop    cc2b884 Monster Video removed
+			* main       fc1ab0f merged
+			  master     1170d3e [ahead 1, behind 9] nothing much
+			  tryFeature c755a89 hello world
+
+
+To show all the branches which are merged :
+
+	git branch --merged
+
+
+
+To show all the branches which are  not yet merged :
+
+	git branch --no-merged
+
+To delet a merged branch (else if it is not merge then it will throw a error with warning)
+
+	git branch -d tryFeature    
+		//(as tryFeature is already merged in main.) like this :
+			error: The branch 'develop' is not fully merged.
+			If you are sure you want to delete it, run 'git branch -D develop'.
+
+
+
+If you are sure you want to delete it even if the brach (say develop) is not merged yet then, run:
+
+	 git branch -D develop
+
+	 i.e 
+
+	 git branch -D <branch-name>
+
+	
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
