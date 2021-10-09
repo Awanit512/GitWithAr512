@@ -526,6 +526,43 @@ If you are sure you want to delete it even if the brach (say develop) is not mer
 
 
 
+## Branching WorkFLOWS:
+
+
+
+We generally make two types of branches:
+
+1>Long Running Branches : long lived span of life of these branches is long exmaple master, develop, system, propose change
+
+2>Topic Branches : plugin change, etc.
+
+
+
+# Now Pushing branch to remote repo
+
+
+	git push origin <branch-name>   // It is good practised to be locally on same branch to which u want to push
+
+if we want at remote to have this branch as some other name then we can do so by this way :
+
+	git push origin <branch-name>:<branch-remote-new-name>
+
+		ex :(assmuing we are in branch mybugfix and want to push it but named it there on remote as just bugfix)
+			git push origin mybugfix:bugfix
+
+If we want to delete the branch locally : 
+
+	git branch -d <branch-name>  // assuming it alreayd merged else thorw an error. if still want to delete it then 
+		git branch -D <branch-name>
+
+if we want to delete the branch in remote say on github :
+
+	git push -d origin <branch-name_to_delete>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------  
+
+
 
 
 
