@@ -371,7 +371,7 @@ now lets commit by git cmit by
 
 Now lets make a alias for unstaging the file say f1.txt
 
-	git config --global alias.unstaged 'restore --staged --'
+	git config --global alias.unstaged 'restore --staged'
 
 	Now git restore --staged f1.txt is same as git unstaged f1.txt
 
@@ -384,9 +384,16 @@ NOW, git log -p -1 is same as git last
 
 and 
 
-	git config --global alias.last_two 'log -p -1'
+	git config --global alias.last-two 'log -p -2'
 
-NOW, git log -p -1 is same as git last_two
+NOW, git log -p -2 is same as git last-two
+
+
+
+
+
+
+
 
 
 
