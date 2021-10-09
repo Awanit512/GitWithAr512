@@ -402,8 +402,9 @@ Lasly To remove the aliases : (suppose we wan't to remove alias.last-two then do
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+## git Branching and Switching 
 
 
 
