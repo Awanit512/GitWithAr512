@@ -389,6 +389,14 @@ and
 NOW, git log -p -2 is same as git last-two
 
 
+Lasly To remove the aliases : (suppose we wan't to remove alias.last-two then do following: )
+
+	git config --global --unset alias.last-two
+
+	If it's local then don't give the --global flag i.e 'git config --unset alias.last-two'
+
+	This way doing seems safer than ediiting config file by : --> 'git config --global --edit'
+
 
 
 
