@@ -162,6 +162,8 @@ so instead of deleting in this way bettwe to delete via git as changes such as r
 #####################################3########### IMP #############################################
 
 ## Suppose we made any tracked file say first.txt into .gitignore and commit it by git commit -a -m "make firt.txt to ignore by git"
+
+
  then after modiftying first.txt it still get reflected in git status 
 logically :: it should not be there as we already listed it into .gitignore so it shoud stop tracking it but No , it will still track it because since we have keep the name of file in .gitignore which earlier was getting tracked by the git so we have to tell explicitly to git not to track by the command
 
@@ -194,7 +196,7 @@ Changes to be commited:    <--------- (this line because we used git in front of
 
 	git rm --cached jj.txt
 
-# To make it trakc again (jj.txt)
+# To make it track again (jj.txt)
 	git add jj.txt
 	git commit -m "making jj.txt is gtting tracked now."
 
@@ -203,6 +205,7 @@ Changes to be commited:    <--------- (this line because we used git in front of
 
 
 ## Git LOgs: Viewing and changig Commits in Git .
+
 
 	git log  // to view the commit 
 	git log -p //  shows the diff value (whatever things removed or added in the commit )
@@ -355,6 +358,34 @@ Above both steps for acheving goal( i.e changing origin url to something else )c
 
 
 
+### Sharing & Updating Projects
+
+| Command | Description |
+| ------- | ----------- |
+| `git push origin [branch name]` | Push a branch to your remote repository |
+| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
+| `git push` | Push changes to remote repository (remembered branch) |
+| `git push origin --delete [branch name]` | Delete a remote branch |
+| `git pull` | Update local repository to the newest commit |
+| `git pull origin [branch name]` | Pull changes from remote repository |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 ## Git ALiases it helps to write just a short command for the long commands by aliasing those commnads.
@@ -440,6 +471,11 @@ in order to make a branch type following :
 		git branch 
 
 
+	# To list all branhces (local and remote ):
+
+		git branch -a 
+
+
 
 	# To move to some branch say dev
 
@@ -448,6 +484,31 @@ in order to make a branch type following :
 		or
 
 		git switch dev
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Cloning the remote Branch  // This command clones the remote branch and check in to it .
+
+	git checkout -b <branch-name> origin/<branchname>
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# To RENAME a branch . // Rename a local branch
+
+	git branch -m <old-branch-name> <new-branch-name>
 
 
 
@@ -460,6 +521,10 @@ assume we are in main branch
 
 	git merge tryFeature
 
+
+To Merge  source branch into target branch :
+
+	git merge <source branch> <target branch>
 
 ## Merge Conflict 
 whenever mege conflict arises it starts with a 'conflict resolutio marker' 
@@ -550,7 +615,9 @@ We generally make two types of branches:
 
 if we want at remote to have this branch as some other name then we can do so by this way :
 
+
 	git push origin <branch-name>:<branch-remote-new-name>
+
 
 		ex :(assmuing we are in branch mybugfix and want to push it but named it there on remote as just bugfix)
 			git push origin mybugfix:bugfix
@@ -562,7 +629,11 @@ If we want to delete the branch locally :
 
 if we want to delete the branch in remote say on github :
 
-	git push -d origin <branch-name_to_delete>
+	git push -d origin <remote-branch-name_to_delete>
+
+	or 
+
+	git push origin --delete <remote-branch-name>
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------  
