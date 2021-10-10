@@ -111,6 +111,11 @@ dir/
 # To comapre previous commit with staging area of now :
 	git diff --staged
 
+
+
+# To compare diff between branches : // To preview changes before merging
+
+	git diff < source branch > <target branch>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
