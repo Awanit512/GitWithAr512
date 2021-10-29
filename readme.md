@@ -336,6 +336,11 @@ Changes to be commited:    <--------- (this line because we used git in front of
 	git push -u origin main
 
 		Enter urs username and Password if promplted  : to push yr changes to github repo. ( remember the password is that ssh deploy key. if forgot then set up the new one by following same step as detailed above in ^^^^^)
+		
+		
+		If not working see this video : https://www.youtube.com/watch?v=ytSoabxSQ6E
+		
+		May be github is saying that Key is in use in that case generate new Personal access token as u may be probbly doing things via HTTP and not ssh.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -641,3 +646,26 @@ if we want to delete the branch in remote say on github :
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+	
+	
+
+	
+## **How To fork a repo(it may be of ssomeone else or it may be yrs repo) into another (existing ) repo of mine **
+	Credit: https://deanmalone.net/post/how-to-fork-your-own-repo-on-github/
+	
+	
+	
+	The forked repo is the repo in which u want to forked it (Your repo )
+	git clone https://github.com/<username>/<forked-repo>.git     
+	
+	cd <forked-repo>
+	
+	# This is from where or the repo whose copy u want to make or the repo u want to fork (someone other repo u have to make it upstream)
+	git remote add upstream https://github.com/<username>/<original-repo>.git
+	
+	git pull upstream master
+	
+	
+	git push origin main
+	
+	
