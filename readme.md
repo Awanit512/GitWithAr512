@@ -664,6 +664,8 @@ if we want to delete the branch in remote say on github :
 	git remote add upstream https://github.com/<username>/<original-repo>.git
 	
 	git pull upstream master
+	#if giving error of merging unrelated historiy
+	git pull upstream master --allow-unrelated-histories
 	
 	
 	git push origin main
